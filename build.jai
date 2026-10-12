@@ -21,7 +21,6 @@ main :: () {
   set_build_options(target_options, w);
 
   compiler_begin_intercept(w);
-  // add all the files
   add_build_file(tprint("%/src/main.jai", #filepath), w);  
   while true {
     message := compiler_wait_for_message();
